@@ -1,0 +1,9 @@
+key,score,mod,notes
+STR,15,+2,"Athletics +2"
+DEX,19,+4,"Stealth +6 • Sleight of Hand +8 • Acrobatics +4"
+CON,20,+5,"Tough as nails • Strong concentration saves"
+INT,9,-1,"Arcane Trickster spellcasting ability"
+WIS,6,-2,"Perception +0 • Insight +0"
+CHA,17,+3,"Deception +7 • Intimidation +5"
+Passives,PP 10,,"PI 10 • PINV 9"
+Senses,120 ft,,"Darkvision"

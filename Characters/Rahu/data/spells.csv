@@ -1,0 +1,10 @@
+name,level,action,vsm,roll,effect
+Mage Hand (Legerdemain),Rogue 3,Action,"V,S","—","Invisible mage hand; pick locks, disarm traps remotely"
+Minor Illusion,Rogue 3,Action,"S,M","—","Create sound or image in a 5-ft cube"
+Prestidigitation,Rogue 3,Action,"V,S","—","Minor magical effects for utility"
+Disguise Self,Rogue 3,Action,"V,S","—","Alter appearance for 1 hour"
+Silent Image,Rogue 3,Action,"V,S,M","—","15-ft cube illusion; concentration"
+Find Familiar (Owl),Rogue 3,"1 hour / ritual","V,S,M","—","Owl familiar for scouting and Help actions"
+Silvery Barbs,Rogue 5,Reaction,"V","—","Force reroll; grant advantage"
+Invisibility,Rogue 7,Action,"V,S,M","—","Invisible for up to 1 hour (concentration)"
+Misty Step,Rogue 8,Bonus Action,"V","—","Teleport 30 ft"

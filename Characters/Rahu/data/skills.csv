@@ -1,0 +1,10 @@
+skill,bonus,use
+Acrobatics,+4,"Balance, escapes, tumbling through danger"
+Athletics,+2,"Climb, jump, swim, forced movement"
+Deception,+7,"Lies, misdirection, bluffs"
+Insight,+0,"Reading motives (low WIS)"
+Intimidation,+5,"Threats, pressure, dominance"
+Perception,+0,"Spotting danger (low WIS)"
+Sleight of Hand,+8,"Pickpocket, plant items, subtle swaps"
+Stealth,+6,"Hiding, ambushes, repositioning"
+Thieves' Tools,+8,"Locks, traps, infiltration (Expertise)"
