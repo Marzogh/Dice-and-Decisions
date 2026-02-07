@@ -471,14 +471,7 @@
           </div>
         </div>
 
-        <div class="pillrow" aria-label="At a glance">
-          <div class="pill">🛡️ AC <strong>14</strong></div>
-          <div class="pill">❤️ HP <strong>13</strong></div>
-          <div class="pill">👣 Speed <strong>30 ft</strong></div>
-          <div class="pill">⚡ Initiative <strong>+6</strong></div>
-          <div class="pill">🎯 Proficiency <strong>+2</strong></div>
-          <div class="pill">🌑 Darkvision <strong>120 ft</strong></div>
-        </div>
+        <div class="pillrow" id="pillrow" aria-label="At a glance"></div>
       </div>
     </header>
 
@@ -487,16 +480,7 @@
       <section class="card">
         <h2>🧠 Ability Scores</h2>
         <div class="content">
-          <div class="stats">
-            <div class="stat"><div class="k">STR</div><div class="v">15 <span class="mono">(+2)</span></div><div class="s">Athletics +2</div></div>
-            <div class="stat"><div class="k">DEX</div><div class="v">19 <span class="mono">(+4)</span></div><div class="s">Stealth +6 • Sleight +8 • Acrobatics +4</div></div>
-            <div class="stat"><div class="k">CON</div><div class="v">20 <span class="mono">(+5)</span></div><div class="s">High HP + strong concentration saves</div></div>
-            <div class="stat"><div class="k">INT</div><div class="v">9 <span class="mono">(−1)</span></div><div class="s">Arcane Trickster casting stat</div></div>
-            <div class="stat"><div class="k">WIS</div><div class="v">6 <span class="mono">(−2)</span></div><div class="s">Perception +0 • Insight +0</div></div>
-            <div class="stat"><div class="k">CHA</div><div class="v">17 <span class="mono">(+3)</span></div><div class="s">Deception +7 • Intimidation +5</div></div>
-            <div class="stat"><div class="k">Passives</div><div class="v">PP 10</div><div class="s">PI 10 • PINV 9</div></div>
-            <div class="stat"><div class="k">Senses</div><div class="v">120 ft</div><div class="s">Darkvision</div></div>
-          </div>
+          <div class="stats" id="stats-grid"></div>
 
           <div style="margin-top:14px" class="two-col">
             <div>
@@ -519,15 +503,7 @@
             <div class="details-body">
               <table aria-label="Skills">
                 <thead><tr><th>Skill</th><th>Bonus</th><th>Use</th></tr></thead>
-                <tbody>
-                  <tr><td>Stealth</td><td class="mono nowrap">+6</td><td class="wrap-ok">Positioning, ambush, disappearing in crowds and shadows.</td></tr>
-                  <tr><td>Sleight of Hand</td><td class="mono nowrap">+8</td><td class="wrap-ok">Pickpocket, plant items, quiet manipulation.</td></tr>
-                  <tr><td>Deception</td><td class="mono nowrap">+7</td><td class="wrap-ok">Cons, bluffs, false identity work.</td></tr>
-                  <tr><td>Intimidation</td><td class="mono nowrap">+5</td><td class="wrap-ok">Pressure, threats, controlled menace.</td></tr>
-                  <tr><td>Acrobatics</td><td class="mono nowrap">+4</td><td class="wrap-ok">Escapes, balance, movement under pressure.</td></tr>
-                  <tr><td>Perception</td><td class="mono nowrap">+0</td><td class="wrap-ok">Use owl scouting and party callouts to compensate.</td></tr>
-                  <tr><td>Investigation</td><td class="mono nowrap">−1</td><td class="wrap-ok">Rely on teamwork; use tools and scene control.</td></tr>
-                </tbody>
+                <tbody id="skills-tbody"></tbody>
               </table>
             </div>
           </details>
@@ -646,80 +622,7 @@
                       <th>What it does</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Mage Hand (Legerdemain)</strong></td>
-                      <td class="nowrap">Rogue 3</td>
-                      <td class="nowrap">Action</td>
-                      <td class="mono nowrap">V,S</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">Invisible hand tricks: manipulate objects, stow/retrieve items, and (with DM guidance) rogue-style finesse at range.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Minor Illusion</strong></td>
-                      <td class="nowrap">Rogue 3</td>
-                      <td class="nowrap">Action</td>
-                      <td class="mono nowrap">S,M</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">5-ft cube sound or image for 1 minute. Misdirection, bait, cover stories.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Prestidigitation</strong></td>
-                      <td class="nowrap">Rogue 3</td>
-                      <td class="nowrap">Action</td>
-                      <td class="mono nowrap">V,S</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">Small magical effects: clean/soil, mark objects, sensory tricks, distractions.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Disguise Self</strong></td>
-                      <td class="nowrap">Rogue 3</td>
-                      <td class="nowrap">Action</td>
-                      <td class="mono nowrap">V,S</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">Change appearance for 1 hour (illusion). Physical inspection can reveal it.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Silent Image</strong></td>
-                      <td class="nowrap">Rogue 3</td>
-                      <td class="nowrap">Action</td>
-                      <td class="mono nowrap">V,S,M</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">15-ft cube visual illusion up to 10 minutes (concentration). Strong battlefield misdirection.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Find Familiar (Owl)</strong></td>
-                      <td class="nowrap">Rogue 3</td>
-                      <td class="nowrap">1 hour (ritual)</td>
-                      <td class="mono nowrap">V,S,M</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">Summon an owl familiar for scouting, Help actions, and surveillance.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Silvery Barbs</strong></td>
-                      <td class="nowrap">Rogue 5</td>
-                      <td class="nowrap">Reaction</td>
-                      <td class="mono nowrap">V</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">When a creature succeeds on an attack/check/save: force a reroll, then grant advantage to a chosen creature.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Invisibility</strong></td>
-                      <td class="nowrap">Rogue 7</td>
-                      <td class="nowrap">Action</td>
-                      <td class="mono nowrap">V,S,M</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">Invisible up to 1 hour (concentration). Ends if the target attacks or casts a spell.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Misty Step</strong></td>
-                      <td class="nowrap">Rogue 8</td>
-                      <td class="nowrap">Bonus</td>
-                      <td class="mono nowrap">V</td>
-                      <td class="nowrap">—</td>
-                      <td class="wrap-ok">Teleport 30 ft to a space you can see. Escape, reposition, reach high ground.</td>
-                    </tr>
-                  </tbody>
+                  <tbody id="spells-tbody"></tbody>
                 </table>
               </div>
 
@@ -733,11 +636,7 @@
               <div class="table-wrap" role="region" aria-label="Drow magic table" tabindex="0">
                 <table aria-label="Drow magic">
                   <thead><tr><th class="nowrap">Feature</th><th class="nowrap">When</th><th class="nowrap">Use</th><th>Notes</th></tr></thead>
-                  <tbody>
-                    <tr><td><strong>Dancing Lights</strong></td><td class="nowrap">Char 1</td><td class="nowrap">At will</td><td class="wrap-ok">Moving lights; signalling + distractions.</td></tr>
-                    <tr><td><strong>Faerie Fire</strong></td><td class="nowrap">Char 3</td><td class="nowrap">1/day</td><td class="wrap-ok">Outlines targets; helps reveal hidden/invisible; can set up advantage.</td></tr>
-                    <tr><td><strong>Darkness</strong></td><td class="nowrap">Char 5</td><td class="nowrap">1/day</td><td class="wrap-ok">Area denial + escape. Be mindful of party visibility.</td></tr>
-                  </tbody>
+                  <tbody id="drow-tbody"></tbody>
                 </table>
               </div>
               <p style="margin:10px 0 0"><span class="tag">Always-on</span> Advantage vs charmed • Immune to magical sleep • Darkvision 120 ft</p>
@@ -810,6 +709,124 @@
     window.addEventListener('beforeprint', () => {
       document.querySelectorAll('details').forEach(d => d.setAttribute('open',''));
     });
+
+    // ===== CSV-driven sections =====
+    function parseCSV(text){
+      const lines = text.trim().split(/\r?\n/);
+      if(!lines.length) return [];
+      const headers = lines.shift().split(',').map(h=>h.trim());
+
+      const rows = [];
+      for(const line of lines){
+        if(!line.trim()) continue;
+        // Minimal quoted CSV support
+        const vals = (line.match(/("[^"]*"|[^",]+)(?=,|$)/g) || []).map(v => v.trim().replace(/^"|"$/g,''));
+        const obj = {};
+        headers.forEach((h,i)=> obj[h] = (vals[i] ?? ''));
+        rows.push(obj);
+      }
+      return rows;
+    }
+
+    async function loadCSV(path){
+      const res = await fetch(path, { cache: 'no-store' });
+      if(!res.ok) throw new Error('Failed to load ' + path);
+      return parseCSV(await res.text());
+    }
+
+    function setFallback(id, message){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.innerHTML = `<div style="padding:10px 12px; opacity:.8">${message}</div>`;
+    }
+
+    async function initCSV(){
+      // Pills
+      try{
+        const pills = await loadCSV('data/pills.csv');
+        const host = document.getElementById('pillrow');
+        if(host){
+          host.innerHTML = pills.map(p => `<div class="pill">${p.icon || ''} ${p.label || ''} <strong>${p.value || ''}</strong></div>`).join('');
+        }
+      }catch(e){
+        setFallback('pillrow', 'Add data/pills.csv to populate this section.');
+      }
+
+      // Stats grid
+      try{
+        const stats = await loadCSV('data/stats.csv');
+        const host = document.getElementById('stats-grid');
+        if(host){
+          host.innerHTML = stats.map(s => `
+            <div class="stat">
+              <div class="k">${s.key || ''}</div>
+              <div class="v">${s.score || ''} <span class="mono">(${s.mod || ''})</span></div>
+              <div class="s">${s.notes || ''}</div>
+            </div>
+          `).join('');
+        }
+      }catch(e){
+        setFallback('stats-grid', 'Add data/stats.csv to populate this section.');
+      }
+
+      // Skills
+      try{
+        const skills = await loadCSV('data/skills.csv');
+        const host = document.getElementById('skills-tbody');
+        if(host){
+          host.innerHTML = skills.map(s => `
+            <tr>
+              <td>${s.skill || ''}</td>
+              <td class="mono nowrap">${s.bonus || ''}</td>
+              <td class="wrap-ok">${s.use || ''}</td>
+            </tr>
+          `).join('');
+        }
+      }catch(e){
+        setFallback('skills-tbody', '<tr><td colspan="3">Add data/skills.csv to populate this table.</td></tr>');
+      }
+
+      // Spells
+      try{
+        const spells = await loadCSV('data/spells.csv');
+        const host = document.getElementById('spells-tbody');
+        if(host){
+          host.innerHTML = spells.map(s => `
+            <tr>
+              <td><strong>${s.name || ''}</strong></td>
+              <td class="nowrap">${s.level || ''}</td>
+              <td class="nowrap">${s.action || ''}</td>
+              <td class="mono nowrap">${s.vsm || ''}</td>
+              <td class="nowrap">${s.roll || ''}</td>
+              <td class="wrap-ok">${s.effect || ''}</td>
+            </tr>
+          `).join('');
+        }
+      }catch(e){
+        setFallback('spells-tbody', '<tr><td colspan="6">Add data/spells.csv to populate this table.</td></tr>');
+      }
+
+      // Drow magic
+      try{
+        const drow = await loadCSV('data/drow_magic.csv');
+        const host = document.getElementById('drow-tbody');
+        if(host){
+          host.innerHTML = drow.map(d => `
+            <tr>
+              <td><strong>${d.feature || ''}</strong></td>
+              <td class="nowrap">${d.when || ''}</td>
+              <td class="nowrap">${d.uses || ''}</td>
+              <td class="wrap-ok">${d.notes || ''}</td>
+            </tr>
+          `).join('');
+        }
+      }catch(e){
+        setFallback('drow-tbody', '<tr><td colspan="4">Add data/drow_magic.csv to populate this table.</td></tr>');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initCSV);
+
   </script>
 </body>
 </html>
